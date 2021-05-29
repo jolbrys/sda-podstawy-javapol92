@@ -7,14 +7,21 @@ public class Zadanie3 {
         int[] tablica1 = {12, 43, 123, 64, 78, 32, 45};
         int[] tablica2 = new int[7];
 
-        //miejsce na zadanie
-        //tutaj trzeba zrobic petle
-        //i wewnatrz tej petli, wpisywac wartosci z tablica1
-        //do odpowiadajacych miejsc w tablica2
+        for(int i = 1; i < tablica2.length; i++){
+            tablica2[i] = tablica1[tablica1.length - i];
+        }
+
+        //alternatywne rozwiazanie
+        /*
+        tablica2 = new int[7];
+        for (int i = tablica2.length; i >= 1; i--){
+            tablica2[tablica2.length - i] = tablica1[i-1];
+        }
+        */
 
         //drukowanie
         for(int element : tablica2){
-            System.out.println(element);
+            System.out.print(element + " ");
         }
     }
 }
